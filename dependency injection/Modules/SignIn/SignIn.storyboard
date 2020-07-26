@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UXp-ZG-GZv">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign In View Controller-->
+        <scene sceneID="POd-UT-rdv">
+            <objects>
+                <viewController id="UXp-ZG-GZv" customClass="SignInViewController" customModule="dependency_injection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4MD-HE-AZ5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="gfy-Qu-o1C">
+                                <rect key="frame" x="107" y="94" width="200" height="157"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Q39-Oh-N7I"/>
+                                    <constraint firstAttribute="height" constant="157" id="kW5-NW-O91"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mxh-hr-Rce">
+                                <rect key="frame" x="30" y="411" width="354" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="bjn-BT-W5i"/>
+                                </constraints>
+                                <color key="textColor" name="lightBlue"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HrI-cr-y5Z" customClass="RoundedButton" customModule="dependency_injection" customModuleProvider="target">
+                                <rect key="frame" x="30" y="742" width="354" height="70"/>
+                                <color key="backgroundColor" name="blueButton"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="cag-4O-jnX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Acessar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="accessButtonTouchUpInside:" destination="UXp-ZG-GZv" eventType="touchUpInside" id="suh-YT-j0m"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Usuário" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OGh-z0-TYa">
+                                <rect key="frame" x="30" y="331" width="354" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="jbd-nO-Bpq"/>
+                                </constraints>
+                                <color key="textColor" name="lightBlue"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" name="darkBlue"/>
+                        <constraints>
+                            <constraint firstItem="HrI-cr-y5Z" firstAttribute="leading" secondItem="D78-wt-LeB" secondAttribute="leading" constant="30" id="416-U0-ZMJ"/>
+                            <constraint firstItem="D78-wt-LeB" firstAttribute="trailing" secondItem="Mxh-hr-Rce" secondAttribute="trailing" constant="30" id="AVO-9f-iTz"/>
+                            <constraint firstItem="D78-wt-LeB" firstAttribute="bottom" secondItem="HrI-cr-y5Z" secondAttribute="bottom" constant="50" id="BV5-13-0nv"/>
+                            <constraint firstItem="Mxh-hr-Rce" firstAttribute="top" secondItem="OGh-z0-TYa" secondAttribute="bottom" constant="30" id="Ctk-lK-aGy"/>
+                            <constraint firstItem="gfy-Qu-o1C" firstAttribute="centerX" secondItem="4MD-HE-AZ5" secondAttribute="centerX" id="DXA-HL-N07"/>
+                            <constraint firstItem="OGh-z0-TYa" firstAttribute="leading" secondItem="D78-wt-LeB" secondAttribute="leading" constant="30" id="OH5-JP-1Dq"/>
+                            <constraint firstItem="Mxh-hr-Rce" firstAttribute="leading" secondItem="D78-wt-LeB" secondAttribute="leading" constant="30" id="XLT-K1-fvK"/>
+                            <constraint firstItem="gfy-Qu-o1C" firstAttribute="top" secondItem="D78-wt-LeB" secondAttribute="top" constant="50" id="aLt-OY-XO9"/>
+                            <constraint firstItem="D78-wt-LeB" firstAttribute="trailing" secondItem="HrI-cr-y5Z" secondAttribute="trailing" constant="30" id="eSN-gU-mdL"/>
+                            <constraint firstItem="D78-wt-LeB" firstAttribute="trailing" secondItem="OGh-z0-TYa" secondAttribute="trailing" constant="30" id="fOA-wu-DMY"/>
+                            <constraint firstItem="OGh-z0-TYa" firstAttribute="top" secondItem="gfy-Qu-o1C" secondAttribute="bottom" constant="80" id="jdI-We-9Sc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="D78-wt-LeB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Br5-qc-OdO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="103" y="-293"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon" width="50" height="39"/>
+        <namedColor name="blueButton">
+            <color red="0.0" green="0.41999998688697815" blue="0.82700002193450928" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="darkBlue">
+            <color red="0.078000001609325409" green="0.11400000005960464" blue="0.25099998712539673" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="lightBlue">
+            <color red="0.19599999487400055" green="0.27500000596046448" blue="0.5690000057220459" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
